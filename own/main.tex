@@ -1,0 +1,45 @@
+\documentclass[utf8]{XDBAthesis}
+% 图形文件的搜索路径
+\def\allfiles{}
+\def\pictures{}
+\graphicspath{{figure/}}
+\numberwithin{algorithm}{chapter}
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+%\usepackage[nomarkers]{endfloat}
+\begin{document}
+%%----------------- 封面部分 ----------------- %%
+    \class{031111}
+    \schoolnumber{03111047}
+    \title{手机拍照手势识别算法}{}   %%题目超过14个字把剩下的放到第二个空
+    \college{计算机学院}
+    \major{计算机科学与技术}
+    \author{吕莹}
+    \advisor{郭杏莉}
+    \maketitle
+%%----------------- 前言部分 ----------------- %%
+    
+    \frontmatter
+    \include{abstract}
+    \tableofcontents
+%%----------------- 正文部分 ----------------- %%
+    \mainmatter
+    \pagestyle{content}
+    \include{chap1}
+    \include{chap2}
+    \include{chap3}
+    \include{chap4}
+    %\include{chap5}
+    %\include{chap6}
+%    \appendix
+%    \include{chapter/chap-req}
+
+%%----------------- 附件部分 ----------------- %%
+    \backmatter
+    %\include{thanks}
+%    \include{chapter/bib}
+    
+\bibliographystyle{gbt7714-2005}
+\bibliography{main}
+\end{document}

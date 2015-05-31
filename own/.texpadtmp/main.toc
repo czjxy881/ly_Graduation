@@ -1,0 +1,32 @@
+\let \XDBA@spaceChar \relax 
+\contentsline {chapter}{\numberline {第一章\hspace {0.3em}}绪论}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}课题研究背景及意义}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}课题研究现状}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Android软件发展现状}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}手势识别研究现状}{3}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}论文主要内容安排}{3}{section.1.3}
+\contentsline {chapter}{\numberline {第二章\hspace {0.3em}}关键技术讨论}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Android平台}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Android起源及发展状况}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Android平台及其优点}{6}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Android系统架构原理}{7}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}NDK简介}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}OpenCV简介}{10}{section.2.3}
+\contentsline {chapter}{\numberline {第三章\hspace {0.3em}}基于OpenCV实现Android系统对摄像头的调用及操作}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}OpenCV环境搭建}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}架构设计}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}highGUI库函数进行对摄像头的调用及操作}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}照相机和Opencv同时对摄像头占用的处理方案}{12}{section.3.4}
+\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}图像处理及手势识别}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}通用的图像操作}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}图像的剪切}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}图像的缩放}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}图像的旋转}{14}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}手势图像预处理}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}灰度处理}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}平滑处理}{15}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}手势特征提取}{16}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Canny检测轮廓}{17}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}直线检测}{17}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}轮廓的提取与描述}{18}{subsection.4.3.3}
+\contentsline {chapter}{参考文献}{19}{chapter*.3}
