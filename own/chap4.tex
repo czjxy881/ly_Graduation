@@ -4,6 +4,23 @@
 \begin{document}
 \else
 \fi
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstset{numbers=left,
+extendedchars=false,
+escapechar=@,style=customc
+}
 \chapter{图像处理及手势识别}
 
 在手势识别中,处理的对象是手势的照片,我们提取数据的目标就是将手势的图像用一个特征向量来表示出来。在本文中所处理的图片主要有TIFF与BMP两种格式,TIFF格式相对来说要复杂一些,可以存储的图像也要丰富得多,它可以存储多张图片,还可以存储多种压缩格式的图片,而BMP格式的图片简单、通用,一般在应用程序中可以方便的显示。因此我们的工作除了熟悉多种格式的图像文件以外,还包括实现多种格式图像文件之间的相互转换,并最终提取出表示图像的特征向量。
@@ -18,21 +35,31 @@
 要输入的参数为要剪切的图像的具体的位置,即要剪切图像左上角的位置和右下角的位置。
 
 假定要剪切图像左上角位置为\emph{(left,top)},右下角的位置\emph{(right,bottom)}，那我们只需要调整图像的宽度为\emph{(righi-left)},调整图像的高度\emph{(bottom-top)}，从图像的二维数组中提取左上角到右下角之间的数据。剪切后图像的数据可以表示为:
-
-
-
+$$
+    PixelArray[x,y] ,\ \ \ left\leq x \leq right \ \ \wedge\ \  top \leq y \leq bottom
+$$
 \subsection{图像的缩放}
 
     图像的缩放操作的函数原型为\emph{void CImage::CollapseOrExpandlmage(double dbRatioX,double dbRatioY)}。输入的参数为图像水平方向需要缩放的尺度以及图像垂直方向需要缩放的尺度。
 
-假定水平方向缩放的比例为\emph{a},垂直方向缩放的比例为\emph{b},那么,缩放后图像的高度为\emph{bH},缩放后图像的宽度为\emph{aw},对于原有图像的任一点\emph{PixelArray[x,y]},在缩放后对应的像素为:
+假定水平方向缩放的比例为\emph{a},垂直方向缩放的比例为\emph{b},那么,缩放后图像的高度为\emph{bH},缩放后图像的宽度为\emph{aW},对于原有图像的任一点\emph{PixelArray[x,y]},在缩放后对应的像素为:
+$$
+    PixelArray[i,j] ,\ \ \ ax\leq i \leq a(x+1) \ \ \wedge\ \  by \leq j \leq b(y+1)
+$$
 
 
-
-    令\emph{CountArray[i,j]}为结果图像中点\emph{(i,j)}对应原有图像像素的计数,那么每次有点映射到点\emph{(i,j)}的像素时,将结果图像中点\emph{(i,j)}的像素值加上该原有图像点\emph{(x,y)}的像素值,并将\emph{CountArray[i,j]}加l。
+    令\emph{CountArray[i,j]}为结果图像中点\emph{(i,j)}对应原有图像像素的计数,那么每次有点映射到点\emph{(i,j)}的像素时,将结果图像中点\emph{(i,j)}的像素值加上该原有图像点\emph{(x,y)}的像素值,并将\emph{CountArray[i,j]}加1。
+$$
+    PixelArrayNew[i,j]=PixelArrayNew[i,j]+PixelArray[x,y]
+$$
+$$
+    CountArray[i,j]=CountArray[i,j]+1
+$$
 
 由于经缩放后,结果图像中的某一点的像素可能对应原有图像中的多个像素,所以对于这种情况需要对该点的像素求取平均值:
-
+$$
+    PixelArrayNew[i,j]=\frac{PixelArrayNew[i,j]}{CountArray[i,j]} %PixelArrayNew[i,j]/CountArray[i,j]
+$$
 
 
     图像缩放操作可以用一个简单的示意图(图\ref{fg:ss})来表示:
@@ -59,25 +86,98 @@
 
 图中细黑色的表示原来图像的范围,粗黑色的为旋转后图像的范围,虚线的为原来图像经旋转后在结果图像中的位置。
 
-旋转操作首先需要判断该角度属于哪一个象限,不同的象限所使用的变换公式是不同的。假定输入的旋转角度为,令已为口经变换后在\emph{[0,]}之间的角度,令为经变换后在之间的角度,其中:
-
-
+旋转操作首先需要判断该角度属于哪一个象限,不同的象限所使用的变换公式是不同的。假定输入的旋转角度为$\theta $,令$\theta_1 $为$\theta$经变换后在$[0,2\pi ]$之间的角度,令$\alpha $ 为$\theta $经变换后在$[0,\pi /2 ]$之间的角度,其中:
+$$
+\alpha =\left\{ 
+    \begin{aligned}
+       & \theta_1 &0 \leq \theta_1 \leq \pi /2 \\
+       & \theta_1 -\pi &\pi /2 < \theta_1 \leq \pi\\
+       & \theta_1 -\pi &\pi < \theta_1 \leq 3\pi /2\\
+       & \theta_1 -3\pi /2 \ \ \ &3\pi /2 <\theta_1 \leq 2\pi 
+    \end{aligned}
+\right.
+$$
+令
+$$
+\begin{aligned}
+NW&=Wcos\alpha +Hsin\alpha \\
+NH&=Wsin\alpha +Hcos\alpha 
+\end{aligned}
+$$
+对于原图像中的点$(x,y)$，在新图像中对应的坐标为$(x',y')$，那么
+\begin{enumerate}
+    \item $\theta $在第一象限时$$HNew=NH,WNew=NW$$
+    $$
+    \begin{aligned}
+      x'&=xcos\alpha +ysin\alpha\\
+      y'&=(W-x-1)sin\alpha +ycos\alpha
+    \end{aligned}
+    $$
+    \item $\theta $在第二象限时$$HNew=NW,WNew=NH$$
+    $$
+    \begin{aligned}
+      x'&=(W-x-1)sin\alpha +ycos\alpha\\
+      y'&=NW-1-xcos\alpha -ysin\alpha
+    \end{aligned}
+    $$
+    \item $\theta $在第三象限时$$HNew=NH,WNew=NW$$
+     $$
+    \begin{aligned}
+      x'&=NW-1-xcos\alpha -ysin\alpha\\
+      y'&=NH-1-(W-x-1)sin\alpha -ycos\alpha
+    \end{aligned}
+    $$
+    \item $\theta $在第四象限时$$HNew=NH,WNew=NW$$
+     $$
+    \begin{aligned}
+      x'&=NH-1-(W-x-1)sin\alpha -ycos\alpha\\
+      y'&=xcos\alpha +ysin\alpha
+    \end{aligned}
+    $$
+\end{enumerate}
 这样在任意的旋转角度下,原图像中的每一点都可以对应到新图像中的某一点中,考虑到经过旋转后在新图像中对应原图像部分的内部可能存在某些点在原图像中不存在对应点,所以需要对这些点作平滑处理,使图像达到连续的效果。
-
+假定对于图像中的任一点$PixelArrayNew[x,y]$，如满足条件:
+$$
+\begin{aligned}
+    PixelArrayNew[x,y] \ \ &\wedge\ \  \\
+    PixelArrayNew[x-1,y]\neq 0 \ \ &\wedge\ \ PixelArrayNew[x+1,y]\neq 0 \\
+    PixelArrayNew[x,y-1]\neq 0\ \ &\wedge\ \ PixelArrayNew[x,y+1]\neq 0
+\end{aligned}
+$$
+则
+$$
+\begin{aligned}
+     PixelArrayNew[x,y]&=\\
+    &(PixelArrayNew[x-1,y]+PixelArrayNew[x+1,y]\\
+    &+PixelArrayNew[x,y-1]+PixelArrayNew[x,y+1])/4
+\end{aligned}  
+$$
 \section{手势图像预处理}
 
 \subsection{灰度处理}
 
 在进行视频流目标识别与跟踪时，通常第一个步骤就是对采集到的彩色图像进行灰度化，这是因为黑白照片数据量小，相比彩照更易实现实时算法，另一方面黑白照片是由未处理的光线所形成的照片，因此从图像处理学角度来看，这种未经特殊滤光处理的图片所涵盖的信息更有价值。
 
-由于在OpenCV中自带函数可以实现图像灰度化，因此在该问题处理中直接调用函数\emph{:cvCreateImage}。实现过程如图\ref{fg:hui}。
-
- \begin{figure}[htb]
-    \centering
-    \includegraphics[width=\textwidth]{figure/hui}
-    \caption{灰度处理实现代码}
-    \label{fg:hui}
-\end{figure}
+由于在OpenCV中自带函数可以实现图像灰度化，因此在该问题处理中直接调用函数\emph{:cvCreateImage}。实现代码如下。
+\begin{lstlisting}[language=C]
+cvNamedWindow("image",CV_WINDOW_AUTOSIZE );//创建窗口，窗口名字为image
+cvShowImage("image",img);//在刚创建的image窗口中载入图像
+//创建一个与img相同大小的图像img1
+IplImage *img1 = cvCreateImage(cvGetSize(img),IPL_DEPTH_8U,1);
+//色彩空间转换，将源彩色图像img转化成目标灰色图像imag1
+cvCvtColor(img,img1,CV_BGR2GRAY); //关键
+cvNamedWindow("GrayImage",CV_WINDOW_AUTOSIZE);//创建窗口，窗口名字GrayImage
+cvShowImage("GrayImage",img1);//载入转化后的图像
+cvSaveImage("/lena_gray.jpg",img1,0);
+\end{lstlisting}
+%
+%
+% \begin{figure}[htb]
+%    \centering
+%    \includegraphics[width=\textwidth]{figure/hui}
+%    \caption{灰度处理实现代码}
+%    \label{fg:hui}
+%\end{figure}
 
 \subsection{平滑处理}
 
@@ -120,9 +220,28 @@ Canny边缘检测器利用Canny算子进行检测，是目前最精确的检测�
 canny边缘检测采用双阈值值法，高阈值用来检测图像中重要的、显著的线条、轮廓等，而低阈值用来保证不丢失细节部分，低阈值检测出来的边缘更丰富，但是很多边缘并不是我们关心的。最后采用一种查找算法，将低阈值中与高阈值的边缘有重叠的线条保留，其他的线条都删除。
 
 函数如下：
-
-效果展示：
-
+\begin{lstlisting}[language=C]
+int main() 
+{ 
+    Mat I=imread("../cat.png"); 
+    cvtColor(I,I,CV_BGR2GRAY); 
+                                                 
+    Mat contours; 
+    Canny(I,contours,125,350); 
+    threshold(contours,contours,128,255,THRESH_BINARY); 
+    namedWindow("Canny"); 
+    imshow("Canny",contours); 
+    waitKey(); 
+    return 0; 
+} 
+\end{lstlisting}
+效果如图\ref{fg:Canny}所示。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth ]{figure/cat}
+    \caption{Canny轮廓检测效果图}
+    \label{fg:Canny}
+\end{figure}
 
 
 \subsection{直线检测}

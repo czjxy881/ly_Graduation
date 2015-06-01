@@ -17,24 +17,25 @@
 \contentsline {section}{\numberline {3.2}架构设计}{11}{section.3.2}
 \contentsline {section}{\numberline {3.3}highGUI库函数进行对摄像头的调用及操作}{11}{section.3.3}
 \contentsline {section}{\numberline {3.4}照相机和Opencv同时对摄像头占用的处理方案}{12}{section.3.4}
-\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}图像处理及手势识别}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}通用的图像操作}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}图像的剪切}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}图像的缩放}{13}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}图像的旋转}{14}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}手势图像预处理}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}灰度处理}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}平滑处理}{15}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}手势特征提取}{16}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Canny检测轮廓}{17}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}直线检测}{17}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}轮廓的提取与描述}{18}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}软件实现与实验结果}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}算法总体设计}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}模块具体实现}{19}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}手势检测模块}{19}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}手势分割模块}{19}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}手势识别模块}{20}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {第六章\hspace {0.3em}}总结与展望}{21}{chapter.6}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{23}{chapter*.3}
-\contentsline {chapter}{参考文献}{25}{chapter*.4}
+\contentsline {section}{\numberline {3.5}实现意义}{12}{section.3.5}
+\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}图像处理及手势识别}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}通用的图像操作}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}图像的剪切}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}图像的缩放}{16}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}图像的旋转}{16}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}手势图像预处理}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}灰度处理}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}平滑处理}{19}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}手势特征提取}{20}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Canny检测轮廓}{20}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}直线检测}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}轮廓的提取与描述}{22}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}软件实现与实验结果}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}算法总体设计}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}模块具体实现}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}手势检测模块}{25}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}手势分割模块}{25}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}手势识别模块}{26}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {第六章\hspace {0.3em}}总结与展望}{27}{chapter.6}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{29}{chapter*.3}
+\contentsline {chapter}{参考文献}{31}{chapter*.4}

@@ -41,7 +41,6 @@
 
 \LoadClass[cs4size,a4paper,fancyhdr,fntef]{ctexbook}[2005/11/25]
 
-
 \ifXDBA@bachelor
     %% set line spacing 1.5times,1.24*14.5=18pt
     \renewcommand{\baselinestretch}{1.62}
@@ -78,7 +77,7 @@
 \RequirePackage{tikz,subfigure}
 %% drawing package
 \RequirePackage{todonotes}
-\RequirePackage{algorithm, algorithmicx, algpseudocode}
+\RequirePackage{algorithm, algorithmicx, algpseudocode,listings}
 
 \ifpdf   % We're running pdfTeX in PDF mode
     \RequirePackage[pdftex]{hyperref}
