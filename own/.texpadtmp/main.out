@@ -28,4 +28,12 @@
 \BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Canny检测轮廓}{section.4.3}% 28
 \BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 直线检测}{section.4.3}% 29
 \BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 轮廓的提取与描述}{section.4.3}% 30
-\BOOKMARK [0][-]{chapter*.3}{参考文献}{}% 31
+\BOOKMARK [0][-]{chapter.5}{第五章  软件实现与实验结果}{}% 31
+\BOOKMARK [1][-]{section.5.1}{5.1 算法总体设计}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{5.2 模块具体实现}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 手势检测模块}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 手势分割模块}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 手势识别模块}{section.5.2}% 36
+\BOOKMARK [0][-]{chapter.6}{第六章  总结与展望}{}% 37
+\BOOKMARK [0][-]{chapter*.3}{致  谢}{}% 38
+\BOOKMARK [0][-]{chapter*.4}{参考文献}{}% 39
