@@ -35,6 +35,10 @@
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 手势检测模块}{section.5.2}% 35
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 手势分割模块}{section.5.2}% 36
 \BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 手势识别模块}{section.5.2}% 37
-\BOOKMARK [0][-]{chapter.6}{第六章  总结与展望}{}% 38
-\BOOKMARK [0][-]{chapter*.3}{致  谢}{}% 39
-\BOOKMARK [0][-]{chapter*.4}{参考文献}{}% 40
+\BOOKMARK [1][-]{section.5.3}{5.3 软件运行结果展示}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 手势识别在OpenCV上的实现}{section.5.3}% 39
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 CPU与系统内存占用}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 手势捕捉与处理}{section.5.3}% 41
+\BOOKMARK [0][-]{chapter.6}{第六章  总结与展望}{}% 42
+\BOOKMARK [0][-]{chapter*.4}{致  谢}{}% 43
+\BOOKMARK [0][-]{chapter*.5}{参考文献}{}% 44

@@ -1,4 +1,4 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 \providecommand{\bibauthor}[1]{#1}
 \providecommand{\bibeditor}[1]{#1}
 \providecommand{\bibtranslator}[1]{#1}
@@ -23,5 +23,106 @@
 \providecommand{\bibyear}[1]{#1}
 \providecommand{\bibdate}[1]{#1}
 \providecommand{\biburl}[1]{\newline\url{#1}}
+
+\bibitem{erol2007vision}
+\bibauthor{EROL A\@, BEBIS G\@, NICOLESCU M, et~al}\@. \bibtitle{Vision-based
+  hand pose estimation: A review}\bibmark{[J]}\@. \bibjournal{Computer Vision
+  and Image Understanding}\@, \bibyear{2007}\@,
+  \bibvolume{108}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{52\thinspace{}\textnormal{--}\thinspace{}73}\@.
+
+\bibitem{lee1995model}
+\bibauthor{LEE J\@, KUNII T~L}\@. \bibtitle{Model-based analysis of hand
+  posture}\bibmark{[J]}\@. \bibjournal{Computer Graphics and Applications,
+  IEEE}\@, \bibyear{1995}\@,
+  \bibvolume{15}\bibnumber{(5)}\thinspace{}\textnormal{:
+  }\bibpages{77\thinspace{}\textnormal{--}\thinspace{}86}\@.
+
+\bibitem{何阳清2004基于几何特征的手势识别算法研究}
+\bibauthor{何阳清}\@.
+  \bibtitle{基于几何特征的手势识别算法研究}\bibmark{[D]}\@.
+  \bibaddress{上海}\thinspace{}\textnormal{:
+  }\bibschool{上海海事大学}\@, \bibyear{2004}\@.
+
+\bibitem{张华2012android}
+\bibauthor{张华\@, 刘铁英}\@. \bibtitle{Android
+  应用软件发展趋势与关键技术探索}\bibmark{[J]}\@.
+  \bibjournal{商场现代化}\@,
+  \bibyear{2012}\bibnumber{(28)}\thinspace{}\textnormal{:
+  }\bibpages{175\thinspace{}\textnormal{--}\thinspace{}175}\@.
+
+\bibitem{张建平2013基于}
+\bibauthor{张建平}\@.
+  \bibtitle{基于Android校园即时信息系统研究}\bibmark{[J]}\@.
+  \bibjournal{电子设计工程}\@, \bibyear{2013}\@,
+  \bibvolume{21}\bibnumber{(20)}\thinspace{}\textnormal{:
+  }\bibpages{117\thinspace{}\textnormal{--}\thinspace{}120}\@.
+
+\bibitem{许瑾2011基于}
+\bibauthor{许瑾}\@. \bibtitle{基于 Android
+  平台音乐播放器的设计与实现}\bibmark{[D]}\@.
+  \bibaddress{北京}\thinspace{}\textnormal{:
+  }\bibschool{北京邮电大学}\@, \bibyear{2011}\@.
+
+\bibitem{王赞超2013}
+\bibauthor{王赞超}\@.
+  \bibtitle{基于Android平台的视觉手势识别研究}\bibmark{[D]}\@.
+  \bibaddress{西安}\thinspace{}\textnormal{:
+  }\bibschool{西安电子科技大学}\@, \bibyear{2013}\@.
+
+\bibitem{单李旺2009android}
+\bibauthor{单李旺}\@. \bibtitle{Android
+  操作平台的研究与应用}\bibmark{[D]}\@.
+  \bibaddress{天津}\thinspace{}\textnormal{: }\bibschool{南开大学}\@,
+  \bibyear{2009}\@.
+
+\bibitem{罗翔2010symbian}
+\bibauthor{罗翔}\@. \bibtitle{Symbian
+  平台软件下载管理系统的设计与实现}\bibmark{[D]}\@.
+  \bibaddress{北京}\thinspace{}\textnormal{:
+  }\bibschool{北京邮电大学}\@, \bibyear{2010}\@.
+
+\bibitem{王茜2011Android}
+\bibauthor{王茜}\@.
+  \bibtitle{Android嵌入式系统架构及内核浅析}\bibmark{[J]}\@.
+  \bibjournal{电脑开发与应用}\@, \bibyear{2011}\@,
+  \bibvolume{24}\bibnumber{(4)}\thinspace{}\textnormal{:
+  }\bibpages{59\thinspace{}\textnormal{--}\thinspace{}61}\@.
+
+\bibitem{秦小文2011基于}
+\bibauthor{秦小文\@, 温志芳\@, 乔维维}\@. \bibtitle{基于 OpenCV
+  的图像处理}\bibmark{[J]}\@. \bibjournal{电子测试}\@,
+  \bibyear{2011}\bibnumber{(7)}\thinspace{}\textnormal{:
+  }\bibpages{39\thinspace{}\textnormal{--}\thinspace{}41}\@.
+
+\bibitem{祝志远2015基于}
+\bibauthor{祝志远\@, 张庆辉}\@. \bibtitle{基于 OpenCV 实现 Android
+  系统对摄像头的调用及操作}\bibmark{[J]}\@.
+  \bibjournal{信息与电脑 (理论版)}\@, \bibyear{2015}\@,
+  \bibvolume{2}\thinspace{}\textnormal{: }\bibpages{002}\@.
+
+\bibitem{郭兴伟2003基于视觉的手势识别算法研究}
+\bibauthor{郭兴伟}\@.
+  \bibtitle{基于视觉的手势识别算法研究}\bibmark{[D]}\@.
+  \bibaddress{上海}\thinspace{}\textnormal{:
+  }\bibschool{上海海联学院}\@, \bibyear{2003}\@.
+
+\bibitem{殷涛2004基于几何矩的手势识别算法}
+\bibauthor{殷涛}\@.
+  \bibtitle{基于几何矩的手势识别算法}\bibmark{[D]}\@.
+  \bibaddress{上海}\thinspace{}\textnormal{:
+  }\bibschool{上海海事大学}\@, \bibyear{2004}\@.
+
+\bibitem{黄柏林2002基于边界特征的人脸识别}
+\bibauthor{黄柏林}\@.
+  \bibtitle{基于边界特征的人脸识别}\bibmark{[D]}\@.
+  \bibaddress{上海}\thinspace{}\textnormal{:
+  }\bibschool{上海海运学院}\@, \bibyear{2002}\@.
+
+\bibitem{王昭威2013基于}
+\bibauthor{王昭威\@, 李钊}\@. \bibtitle{基于 OpenCV
+  的图像特征提取与匹配}\bibmark{[J]}\@. \bibjournal{软件}\@,
+  \bibyear{2013}\@, \bibvolume{34}\bibnumber{(11)}\thinspace{}\textnormal{:
+  }\bibpages{147\thinspace{}\textnormal{--}\thinspace{}148}\@.
 
 \end{thebibliography}

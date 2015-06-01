@@ -14,7 +14,7 @@
 
 \section{架构设计}
 
-    在已经搭建好了编译环境后，接下来主要进行两部分的开发：首先主要是涉及 UI 界面和程序的逻辑流程在基于Android应用程序框架下进行Java端的开发；其次是JNI接口的开发，通过OpenCV与JNI接口编写本地的 C/C++ 代码，并利用 Android NDK 对其进行编译，然后运用编译后生成的 Java 代码可调用动态链接库so文件，最后通过 Eclipse 编译打包并生成应用程序，整体框架图如图\ref{fg:whole}所示。
+    在已经搭建好了编译环境后，接下来主要进行两部分的开发：首先主要是涉及 UI 界面和程序的逻辑流程在基于Android应用程序框架下进行Java端的开发\cite{祝志远2015基于} ；其次是JNI接口的开发，通过OpenCV与JNI接口编写本地的 C/C++ 代码，并利用 Android NDK 对其进行编译，然后运用编译后生成的 Java 代码可调用动态链接库so文件，最后通过 Eclipse 编译打包并生成应用程序，整体框架图如图\ref{fg:whole}所示。
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.8\textwidth]{figure/opencv}
