@@ -95,18 +95,6 @@
   \bibyear{2011}\bibnumber{(7)}\thinspace{}\textnormal{:
   }\bibpages{39\thinspace{}\textnormal{--}\thinspace{}41}\@.
 
-\bibitem{祝志远2015基于}
-\bibauthor{祝志远\@, 张庆辉}\@. \bibtitle{基于 OpenCV 实现 Android
-  系统对摄像头的调用及操作}\bibmark{[J]}\@.
-  \bibjournal{信息与电脑 (理论版)}\@, \bibyear{2015}\@,
-  \bibvolume{2}\thinspace{}\textnormal{: }\bibpages{002}\@.
-
-\bibitem{郭兴伟2003基于视觉的手势识别算法研究}
-\bibauthor{郭兴伟}\@.
-  \bibtitle{基于视觉的手势识别算法研究}\bibmark{[D]}\@.
-  \bibaddress{上海}\thinspace{}\textnormal{:
-  }\bibschool{上海海联学院}\@, \bibyear{2003}\@.
-
 \bibitem{殷涛2004基于几何矩的手势识别算法}
 \bibauthor{殷涛}\@.
   \bibtitle{基于几何矩的手势识别算法}\bibmark{[D]}\@.

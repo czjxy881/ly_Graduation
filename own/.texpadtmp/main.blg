@@ -5,7 +5,6 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: chap1.aux
 A level-1 auxiliary file: chap2.aux
 A level-1 auxiliary file: chap3.aux
-A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
 A level-1 auxiliary file: chap6.aux
 A level-1 auxiliary file: thanks.aux
@@ -14,44 +13,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ../main.bib
-You've used 16 entries,
+You've used 14 entries,
             3050 wiz_defined-function locations,
-            806 strings with 7908 characters,
-and the built_in function-call counts, 14779 in all, are:
-= -- 1401
-> -- 40
-< -- 96
-+ -- 1083
-- -- 117
-* -- 604
-:= -- 1567
+            794 strings with 7636 characters,
+and the built_in function-call counts, 13197 in all, are:
+= -- 1250
+> -- 35
+< -- 84
++ -- 952
+- -- 105
+* -- 537
+:= -- 1379
 add.period$ -- 0
-call.type$ -- 16
-change.case$ -- 48
+call.type$ -- 14
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 1869
-empty$ -- 712
-format.name$ -- 96
-if$ -- 3871
+cite$ -- 14
+duplicate$ -- 1691
+empty$ -- 647
+format.name$ -- 84
+if$ -- 3447
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 14
 missing$ -- 0
-newline$ -- 75
-num.names$ -- 16
-pop$ -- 239
+newline$ -- 69
+num.names$ -- 14
+pop$ -- 223
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 234
+skip$ -- 203
 stack$ -- 0
-substring$ -- 1502
-swap$ -- 668
+substring$ -- 1352
+swap$ -- 597
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 236
-width$ -- 18
-write$ -- 238
+while$ -- 215
+width$ -- 16
+write$ -- 212
