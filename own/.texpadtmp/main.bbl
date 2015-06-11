@@ -113,4 +113,10 @@
   \bibyear{2013}\@, \bibvolume{34}\bibnumber{(11)}\thinspace{}\textnormal{:
   }\bibpages{147\thinspace{}\textnormal{--}\thinspace{}148}\@.
 
+\bibitem{祝志远2015基于}
+\bibauthor{祝志远\@, 张庆辉}\@. \bibtitle{基于 OpenCV 实现 Android
+  系统对摄像头的调用及操作}\bibmark{[J]}\@.
+  \bibjournal{信息与电脑 (理论版)}\@, \bibyear{2015}\@,
+  \bibvolume{2}\thinspace{}\textnormal{: }\bibpages{002}\@.
+
 \end{thebibliography}

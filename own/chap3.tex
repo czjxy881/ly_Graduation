@@ -172,6 +172,16 @@ OpenCV 里提取目标轮廓的函数是\emph{findContours}，它的输入图像
     \item 预设尺寸：前文说到，VideoCapture是在线程初始化时预设好尺寸的，因此我们就在一开始预设了较大的尺寸，而由于间隔采集，大尺寸并不会造成太大的处理压力，我们先将大尺寸彩色图片传至前端渲染，再将其缩小灰度化后传入后端计算。从而保证了预览质量和相片质量。
 \end{enumerate}
 
+\section{Android平台C和Java交叉编译}
+Android平台下，C和Java的交叉编译主要通过NDK实现。首先在基于Android应用程序框架下进行Java端的开发\cite{祝志远2015基于} ；然后通过OpenCV与JNI接口编写本地的 C/C++ 代码，并利用 Android NDK 对其进行编译得到JNI接口(so文件)，然后运用Java端编译后生成的 Java 代码可调用动态链接库so文件，最后通过 SDK 编译打包并生成应用程序，整体逻辑图如图\ref{fg:whole}所示。实际上可以完全交由智能IDE(如Android Studio)完成。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figure/opencv}
+    \caption{交叉编译逻辑图}
+    \label{fg:whole}
+\end{figure}
+
+
 
 \chapter{算法设计与实现}
 本章主要介绍了本算法选取的手势，算法的具体流程，及整个算法的封装结构。
