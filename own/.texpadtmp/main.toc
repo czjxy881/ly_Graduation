@@ -22,23 +22,26 @@
 \contentsline {subsection}{\numberline {3.1.2}平滑处理}{15}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}手势特征提取}{16}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Canny检测轮廓}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}直线检测}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}轮廓的提取与描述}{19}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.2}直线检测}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}轮廓的提取与描述}{18}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}照相机线程冲突解决方案}{19}{section.3.3}
 \contentsline {chapter}{\numberline {第四章\hspace {0.3em}}算法设计与实现}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}手势识别}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}手势选取}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}识别过程}{21}{subsection.4.1.2}
-\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}软件实现与实验结果}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}算法总体设计}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}模块具体实现}{23}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}手势检测模块}{23}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}手势分割模块}{23}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}手势识别模块}{24}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}软件运行结果展示}{24}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}手势识别在OpenCV上的实现}{24}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}CPU与系统内存占用}{25}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}手势捕捉与处理}{25}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {第六章\hspace {0.3em}}总结与展望}{27}{chapter.6}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{29}{chapter*.4}
-\contentsline {chapter}{参考文献}{31}{chapter*.5}
+\contentsline {section}{\numberline {4.1}手势选取}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}算法流程}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}前端预览模块}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}预处理模块}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}手势识别模块}{22}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}算法封装结构}{23}{section.4.3}
+\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}软件实现与实验结果}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}算法总体设计}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}模块具体实现}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}手势检测模块}{25}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}手势分割模块}{25}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}手势识别模块}{26}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}软件运行结果展示}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}手势识别在OpenCV上的实现}{26}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}CPU与系统内存占用}{27}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}手势捕捉与处理}{27}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {第六章\hspace {0.3em}}总结与展望}{29}{chapter.6}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{31}{chapter*.4}
+\contentsline {chapter}{参考文献}{33}{chapter*.5}

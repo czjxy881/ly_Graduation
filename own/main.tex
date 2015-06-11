@@ -9,6 +9,23 @@
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 %\usepackage[nomarkers]{endfloat}
 \begin{document}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstset{numbers=left,
+extendedchars=false,
+escapechar=@,style=customc
+}
 %%----------------- 封面部分 ----------------- %%
     \class{031111}
     \schoolnumber{03111047}

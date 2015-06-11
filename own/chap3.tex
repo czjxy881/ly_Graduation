@@ -3,7 +3,25 @@
 \def\pictures{}
 \begin{document}
 \else
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstset{numbers=left,
+extendedchars=false,
+escapechar=@,style=customc
+}
 \fi
+
 \chapter{关键技术}
 本章将介绍本算法中的几个关键技术。
 
@@ -155,14 +173,61 @@ OpenCV 里提取目标轮廓的函数是\emph{findContours}，它的输入图像
 \end{enumerate}
 
 
-
 \chapter{算法设计与实现}
-本章主要介绍了本算法选取的手势，手势识别的具体过程，及整个算法的封装结构。
+本章主要介绍了本算法选取的手势，算法的具体流程，及整个算法的封装结构。
 \section{手势选取}
-考虑到本算法为手势拍照设计的专用算法，故手势不需太多。为了保证识别性能，我们采用动态手势来作为算法识别的手势，即上划，下划，左划，右划四个基本手势。
-\section{识别过程}
+考虑到本算法为手势拍照设计的专用算法，故手势不需太多。为了保证识别性能，我们选取了五种基本手势，即上划，下划，左划，右划和点击。
+\section{算法流程}
+本算法流程图如图\ref{fg:af}所示。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth ]{figure/algorithmflow}
+    \caption{算法流程图}
+    \label{fg:af}
+\end{figure}
+
+本算法可分为三个模块，分别是前端预览模块，预处理模块和手势识别模块。
+\subsection{前端预览模块}
+前端预览模块包含从祯捕获到前端展示所有过程。首先用一个单独的线程控制倒计时延时，当时间到达后捕获一个彩色祯，本文中为一个640*480大小的祯。捕获完成后传至前端进行渲染。本文采用观察者设计模式，故渲染过程只需将祯传递给前端监听者即可，不需本算法实现。
+\subsection{预处理模块}
+本模块为手势识别的预处理阶段，包含三部分，灰度处理，平滑处理，手势分割。
+\begin{enumerate}
+    \item 首先我们将采集到的彩色祯利用库函数进行灰度处理。
+    \item 随后我们再进行平滑处理，我们利用Opencv库函数对图像进行平滑处理，并且为了有效识别点击效果，我们采用去100祯画面的灰度平均值作为一个衡量因子。
+    \item 最后，通过比较前后两祯的差异确定运动物体，为了加速比对过程，我们采用C语言进行两祯比对。
+\end{enumerate}
+\subsection{手势识别模块}
+手势识别模块负责具体的手势识别过程。
+\begin{itemize}
+    \item 首先，我们先检测了运动的手势是否占到了预设的最小画面比重阀值，即运动物体与整个画面的占幅比，如果比重过小则忽略。实际中，我们采用$1/10$为最小占比阀值。
+    \item 随后，我们又判断手势运动时间是否大于最小阀值，如果小于阀值，我们则认为手势并没有正确表达，因此忽略。实际中，我们采用$1.5\times 500ms$为最小时间阀值。
+    \item 接着，我们又进行了位移阀值判断，判断手势运动距离有没有达到预定最小位移，如果没达到，则认为移动过小，可以忽略。实际中，我们采用画幅大小的三分之一作为最小位移阀值。
+    \item 经过前3步检测，我们可以认定已检测到了手势。进而只需进行方向判断即可判断是上述前四种手势的哪一种。而对于点击手势，则是利用预处理阶段的100祯画面灰度平均值作为基准，如果灰度突然增加大于最小点击阀值（实际中，我们采用0.3倍平均灰度值）则判定为点击。至此，手势识别完成。
+\end{itemize}
+
+随后我们在log中输出识别结果，判断是否为预设手势，如果是，则先判断是否是退出手势，如果是退出，则直接退出程序，如果不是，则执行相应操作(同样采用观察者模式)。
 
 \section{算法封装结构}
+为了方便算法的移植与使用，我们将本算法进行了封装，将其封装为了一个library，其中CameraGestureSensor对外暴露方法和接口，如图\ref{fg:cmp}所示。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth ]{figure/cmp}%
+    \includegraphics[width=0.4\textwidth ]{figure/pkg}
+    \caption{组件图和类图}
+    \label{fg:cmp}
+\end{figure}
+CameraGestureSensor类对外暴露两个接口均为观察者模式中的监听者接口:DrawListener和GestureListener。
+\begin{enumerate}
+    \item DrawListener:其中包含一个draw(Mat)抽象方法，监听者利用传入的Mat在前端渲染。
+    \item GestureListener:包含五个抽象方法，分别为onGestureUp,onGestureDown，onGestureLeft，onGestureRight，onClick。监听者利用重载这几个实现真正功能调用。
+\end{enumerate}
+封装实际结果如图\ref{fg:rr}所示。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\textwidth ]{figure/realpkg}
+    \caption{实际结构截图}
+    \label{fg:rr}
+\end{figure}
 
 \ifx\allfiles\undefined
 %\bibliographystyle{unsrt}
